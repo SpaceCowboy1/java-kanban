@@ -1,12 +1,12 @@
-import java.util.Objects;
+package model;
 
-public abstract class Task {
+import java.util.Objects;
+import status.Progress;
+
+public class Task {
     private String nameOfTask;
     private String description;
-    private int id;
-    private static int counter;
-    private final String type;
-    Progress progress;
+    private Progress progress;
 
 
 
@@ -14,8 +14,6 @@ public abstract class Task {
         this.nameOfTask = nameOfTask;
         this.description = description;
         this.progress = progress;
-        this.id = counter++;
-        this.type = String.valueOf(getClass());
 
     }
 
@@ -24,17 +22,11 @@ public abstract class Task {
         return progress;
     }
 
-    public String getType() {
-        return type;
-    }
 
     public void setProgress(Progress progress) {
         this.progress = progress;
     }
 
-    public int getId() {
-        return id;
-    }
 
     @Override
     public boolean equals(Object obj) {

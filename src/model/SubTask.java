@@ -1,4 +1,6 @@
+package model;
 
+import status.Progress;
 
 public class SubTask extends Task {
     private int epicId = -1;
