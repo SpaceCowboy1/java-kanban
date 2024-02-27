@@ -5,6 +5,7 @@ import status.Progress;
 public class SubTask extends Task {
     private int epicId = -1;
 
+
     public SubTask(String nameOfTask, String description, Progress progress) {
         super(nameOfTask, description, progress);
     }
